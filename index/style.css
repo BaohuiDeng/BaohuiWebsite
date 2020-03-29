@@ -5,12 +5,7 @@
   box-sizing: border-box;
 }  /* 目前没什么作用 */
 
-
-
-
-}
 html { font-size:100%; }
-
 
 body{
   font-family: 　Arial,sans-sans-serif;
@@ -25,10 +20,11 @@ body{
   text-decoration: none;
   font-weight: bold;
 }
+
 .container a:hover{
   color:#e2a97b;
-
 }
+
 .bg-img {
   /* The image used 给图片加一层黑色layer直接用linear gradient 就行不需要
   用到overlay*/
@@ -43,16 +39,6 @@ body{
   /* Needed to position the navbar */
   position: relative;
 }
-/*  Alternative to using Linear gradient
-.overlay{
-  width: 100%;
-  height: 100%;
-  background:rgba(0, 0, 0, 0.5);
-  position: absolute;
-  opacity: 0.8;
-} */
-
-
 
 /* Position the navbar container inside the image */
  .container {
@@ -62,13 +48,34 @@ body{
   position: relative;
   max-width: 1000px;
 }
+
 .container .baohui{
   top:  1.4rem;
   left: 1rem;
   position: fixed;
 }
 
+@media screen and (max-width:414px){
+  .container .baohui{
+    top:  .8rem;
+    left: 1.5rem;
+    font-size: .8rem;
+  }
+}
 
+@media screen and (max-width:411px){
+  .container .baohui{
+    top:  .8rem;
+    left: 1rem;
+    position: fixed;
+  }
+}
+
+@media screen and (max-width:320px){
+  .container .baohui{
+  font-size: .8rem;
+  }
+}
 
 /* The navbar */
 .topnav {
@@ -89,7 +96,6 @@ body{
   color: #e2a97b;
 }
 
-
 @media  screen and (max-width:600px){
   .topnav a {
     float: left;
@@ -99,7 +105,6 @@ body{
     text-decoration: none;
     font-size: .8rem;
   }
-
 }
 
 #showcase{
@@ -118,7 +123,6 @@ body{
   bottom:0;
   right:0;
   color:white;
-
 }
 
 .showcase-content h1{
@@ -140,13 +144,14 @@ body{
   border-radius: 10px;
   font-weight: bold;
 }
+
 .container .btn:hover{
   background-color: #e2a97b !important;
   color: black;
   transition: 0.6s;
-
-
 }
+
+
 
 
 
@@ -161,24 +166,21 @@ body{
     margin: auto;
 }
 
-
 #biography{
   padding:5rem 0;
-
 }
 
 .text-primary{
   color:grey;
 }
 
-
 #biography h2, #services h2{
   text-align:center;
   font-size:2rem;
   margin-bottom:2rem;
 /*   margin-top: -2rem; */
-
 }
+
 #biography h3{
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -191,6 +193,7 @@ body{
 #biography .about-content{
   display: block;
 }
+
 #biography .about-text,
 #biography .about-image{
   flex:1;
@@ -199,6 +202,51 @@ body{
 #biography .about-text{
   text-align: justify;
 }
+
+#biography .btn-resume:hover{
+  background:#e2a97b;
+  color:black;
+  transition: 0.6s;
+}
+
+#biography .btn-resume{
+  border: 1px solid #e2a97b;
+  font-size: .8rem;
+  border-radius: 30px;
+  padding: 10px 25px 10px 25px;
+  margin-left: 40%;
+  margin-right: 40%;
+  color: black;
+  font-family: arial;
+  font-weight: bold;
+  background-color: white;
+}
+
+.youtubelink{
+  color:#e2a97b;
+}
+
+.youtubelink:hover{
+  color:grey;
+}
+
+@media  screen and (max-width:1160px){
+    #biography{
+    padding:5rem 2rem;
+  }
+  #biography h2, #services h2{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:2rem;
+  }
+  #biography h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  #biography p.lead{
+    margin-bottom:1rem;
+  }
+  }
 
 @media screen and (min-width:1000px){
   #biography .about-image img{
@@ -209,13 +257,6 @@ body{
   }
 }
 
-.youtubelink{
-  color:#e2a97b;
-}
-
-.youtubelink:hover{
-  color:grey;
-}
 #biography .about-image img{
   display: inline-block;
   width:70%;
@@ -223,7 +264,6 @@ body{
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-
 
 .ga {
   float: left;
@@ -243,69 +283,23 @@ body{
   transform: rotate(360deg);
 }
 
-
-
-@media screen and (max-width: 500px) {
-  .ga {
-    width: 100%;
+@media  screen and (max-width:768px){
+  #biography .btn-resume{
+    padding: 5px 10px 5px 10px;
+    margin-top: 2%;
   }
-
-  #biography .about-image img{
-
-    margin-top: 1.5rem;
-    margin-bottom: .5rem;
-  }
-
 }
 
-
-#biography .btn-resume{
-  border: 1px solid #e2a97b;
-  font-size: .8rem;
-  border-radius: 30px;
-  padding: 10px 25px 10px 25px;
-  margin-left: 40%;
-  margin-right: 40%;
-  color: black;
-  font-family: arial;
-  font-weight: bold;
-  background-color: white;
+@media  screen and (max-width:700px){
+  #biography .btn-resume{
+    padding: 5px 10px 5px 10px;
+    font-size: .5rem;
+  }
 }
 
-
-.btn-resume:hover{
-  background:#e2a97b;
-  color:black;
-  transition: 0.6s;
-}
-
-
-
-@media  screen and (max-width:1160px){
-    #biography{
-    padding:5rem 2rem;
-
-  }
-
-  #biography h2, #services h2{
-    text-align:center;
-    font-size:2rem;
-    margin-bottom:2rem;
-  }
-  #biography h3{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  #biography p.lead{
-    margin-bottom:1rem;
-  }
-  }
-
-  @media  screen and (max-width:650px){
+@media  screen and (max-width:650px){
       #biography{
       padding:5rem 2rem;
-
     }
 
     #biography h2, #services h2{
@@ -324,27 +318,66 @@ body{
     }
 
     #biography .btn-resume{
-
       padding: 5px 10px 5px 10px;
       margin-left: 40%;
       margin-right: 40%;
-
+    }
     }
 
+@media screen and (max-width: 500px) {
+      .ga {
+        width: 100%;
+            }
 
-
+      #biography .about-image img{
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+      }
     }
-    @media  screen and (max-width:375px){
 
+@media  screen and (max-width:414px){
+      #biography .btn-resume{
+        padding: 10px 25px 10px 25px;
+        margin-left: 0;
+        margin-right: 25%;
+        font-size: .5rem;
+     }
+    }
 
+@media  screen and (max-width:411px){
+      #biography .btn-resume{
+        padding: 10px 25px 10px 25px;
+        margin-left: 0;
+        margin-right: 25%;
+        background: white;
+        font-size: .6rem;
+     }
+    }
+
+@media  screen and (max-width:375px){
     #biography .btn-resume{
-
       padding: 10px 25px 10px 25px;
       margin-left: 0;
       margin-right: 25%;
       background: white;
+      font-size: .5rem;
+   }
+    #biography h2{
+      margin-top: -1.5rem;
+    }
+    .education .education-heading{
+      margin-top: -1.5rem;
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -353,14 +386,13 @@ body{
 /*  --- 直接在section 的class设置background color---*/
 .education{
   background: #f4f4f4;
-
 }
 
 .timeline{
 margin-left: 3rem;
 
-
 }
+
 .timeline ul{
   border-left: 4px solid grey;
   border-radius: .9rem;
@@ -374,11 +406,9 @@ margin-left: 3rem;
   margin-bottom: -2rem;
   margin-top: 3rem;
 }
+
 .educationbox{
-
-
 margin-left: 25%;
-
 }
 
 #education h1{
@@ -397,6 +427,7 @@ margin-left: 25%;
 .timeline p{
   color:	#606060;
 }
+
 .timeline h2{
   font-size: 1rem;
   text-transform: uppercase;
@@ -405,8 +436,8 @@ margin-left: 25%;
   left: 10px;
   margin-top: -1rem;
   color: #707070;
-
 }
+
 /* 时间轴右边的li*/
 .timeline .date{
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -415,12 +446,10 @@ margin-left: 25%;
   position: relative;
 }
 
-
 .timeline .date:last-of-type{
   padding-bottom: 0;
   margin-bottom: 0;
   border: none;
-
 }
 
 /* 时间轴上的数字日期*/
@@ -430,6 +459,7 @@ margin-left: 25%;
   top:50%;
   transform: translateY(-50%);
 }
+
 /* 时间 2019-present */
 .timeline .date::before{
   content: attr(data-date);
@@ -449,8 +479,8 @@ margin-left: 25%;
   height: 0.5rem;
   width: 0.5rem;
   background-color: #313534;
-
 }
+
 @media  screen and (max-width:1160px){
 /* 日期 present */
   .timeline .date::before{
@@ -471,7 +501,6 @@ margin-left: 25%;
     height: 0.5rem;
     width: 0.5rem;
     background-color: #313534;
-
   }
 
   .timeline ul{
@@ -499,14 +528,9 @@ margin-left: 25%;
   .educationbox{
     margin-left: 3%;
   }
-
 }
 
-
 @media screen and (max-width:700px){
-
-
-
 .timeline .date::before{
   content: attr(data-date);
   left:-15rem;
@@ -516,6 +540,7 @@ margin-left: 25%;
   color:grey;
   font-size: .9rem;
 }
+
 .timeline ul{
 font-size: .7rem;
 width: 70%;
@@ -524,39 +549,77 @@ margin-left: -1rem;
 
 .timeline h2{
   font-size: .8rem;
-
 }
 
 .timeline .date::after{
-
   left: -2.2rem;
   height: 0.2rem;
   width: 0.2rem;
-
 }
 
 .timeline ul{
   border-left: 2px solid grey;
   border-radius: .9rem;
   left: 40%;
-
 }
 
 #education h1{
   text-align:center;
   font-size:1.4rem;
-
 }
 }
 
+@media screen and (max-width:414px){
+.timeline .date::before{
+  left:-9rem;
+  width: 80px;
+  font-size: .6rem;
+}
+
+.timeline li{
+  margin-left: -2rem;
+}
+
+.timeline ul{
+  padding-left: -.9rem;
+  width: 220px;
+}
+
+.timeline .date::after{
+  left: -.1rem;
+  width: .1rem;
+  height: .1rem;
+}
+}
+
+@media screen and (max-width:411px){
+  .timeline .date::before{
+    content: attr(data-date);
+    left:-10rem;
+    text-align: justify;
+    min-width: 12rem;
+    font-size: 1rem;
+    color:grey;
+    font-size: .7rem;
+  }
+
+  .timeline h2{
+    font-size: .7rem;
+  }
+
+.timeline li{
+  margin-left: -2rem;
+}
+
+.timeline .date::after{
+  left: -.2rem;
+}
+}
 
 @media screen and (max-width:375px){
-
-
-
 .timeline .date::before{
   content: attr(data-date);
-  left:-12rem;
+  left:-10rem;
   text-align: justify;
   min-width: 12rem;
   font-size: 1rem;
@@ -564,12 +627,38 @@ margin-left: -1rem;
   font-size: .7rem;
 }
 
+.timeline .date::after{
+  left: -.1rem;
+  width: .1rem;
+  height: .1rem;
+}
 
 .timeline h2{
   font-size: .6rem;
-
+}
 }
 
+@media screen and (max-width:320px){
+.timeline .date::before{
+  left:-9rem;
+  width: 80px;
+  font-size: .6rem;
+}
+
+.timeline li{
+  margin-left: -2rem;
+}
+
+.timeline ul{
+  padding-left: -.9rem;
+  width: 220px;
+}
+
+.timeline .date::after{
+  left: -.1rem;
+  width: .1rem;
+  height: .1rem;
+}
 }
 
 
@@ -592,11 +681,13 @@ margin-left: -1rem;
 .fa-map-marker, .fa-calendar-alt{
   color: #e2a97b;
 }
+
 .experience .experience-heading{
   margin-top: 6rem;
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .experience h1{
   font-size: 2rem;
 }
@@ -607,8 +698,8 @@ margin-left: -1rem;
   display: inline-block;
   float: right;
   margin-right:2rem;
-
 }
+
 .leftbox .text{
   display: inline-block;
   width: 12rem;
@@ -617,7 +708,6 @@ margin-left: -1rem;
  .rightbox .distance{
    padding: 3px;
 }
-
 
 .experience .rightbox{
 padding: 5px;
@@ -641,10 +731,7 @@ margin-right:10%;
 /*  phone pixel*/
 
 
-
-
 @media screen and (max-width:768px){
-
   .experience .bigbox{
     display: flex;
     flex-direction: column;
@@ -653,45 +740,83 @@ margin-right:10%;
     padding-top: 1rem;
   }
 
-
   .experience .experience-heading{
     margin-top: 6rem;
     text-align: center;
     margin-bottom: 2rem;
-
   }
 
   .experience{
     background: white;
     height: 1730px;
-    margin-bottom: -35rem;
+    margin-bottom: -45rem;
     }
 
-    .experience .leftbox{
-
+  .experience .leftbox{
       text-align: left;
       margin-top: .8rem;
       padding: 5px;
       margin-left: 20%;
+      width: 70%;
     }
-    .experience .rightbox{
+
+  .experience .rightbox{
     padding: 3px;
     float: right;
     margin: 0rem 20%;
+    width: 70%;
     }
+
     .experience h1{
       font-size: 1.4rem;
     }
-
 }
 
-@media screen and (max-width:375px){
 
+@media screen and (max-width:590px){
+ .experience{
+   margin-bottom: -37rem;
+}
+}
+
+@media screen and (max-width:414px){
   .experience .bigbox{
     display: flex;
     flex-direction: column;
   }
 
+ .experience .boxcon{
+   font-size: .9rem;
+   margin-left: -5%;
+   margin-right: 0%;
+   margin-top: -1rem;
+ }
+ .experience{
+
+   margin-bottom: -40rem;
+}
+}
+
+@media screen and (max-width:411px){
+  .experience .bigbox{
+    display: flex;
+    flex-direction: column;
+  }
+
+ .experience .boxcon{
+   font-size: .9rem;
+   margin-left: -5%;
+   margin-right: 0%;
+   margin-top: -1rem;
+ }
+
+ .experience{
+
+   margin-bottom: -40rem;
+}
+}
+
+@media screen and (max-width:375px){
   .experience .experience-heading h1{
     margin-top: 5rem;
     text-align: justify;
@@ -701,22 +826,29 @@ margin-right:10%;
   .experience{
     background: white;
     height: 1700px;
+    margin-bottom: -36rem;
+}
 }
 
-  .experience .rightbox{
-  width: 280px;
-  left: -18%;
-  position: relative;
-}
-.experience .leftbox{
 
-  text-align: left;
-  margin-top: .8rem;
-  padding: 5px;
-  margin-left: 2%;
+@media screen and (max-width:360px){
+
+
+  .experience{
+
+    margin-bottom: -36rem;
+}
 }
 
+@media screen and (max-width:320px){
+  .experience{
+    margin-bottom: -33rem;
+    }
 }
+
+
+
+
 
 
 
@@ -732,14 +864,17 @@ margin-right:10%;
   margin-bottom: 2rem;
   padding: 2rem;
 }
+
 #services h3{
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.5rem;
 }
+
 #services .boxes{
   display: flex;
 }
+
 #services .box{
   background: #fff;
   flex:1;
@@ -749,10 +884,10 @@ margin-right:10%;
   box-shadow: 2px 2px 5px #d1d1d1;
   font-size: 1.1rem;
 }
+
 .fa-check-circle{
   color:#e2a97b;
 }
-
 
 .feature{
   text-align: justify;
@@ -761,18 +896,15 @@ margin-right:10%;
 
 .box .icon
 {
-
 margin-top: -4rem;
 margin-left: 30%;
 margin-right: 30%;
-
 }
 
 .box .iconw{
   margin-top: -4rem;
   margin-left: 32%;
   margin-right: 30%;
-
 }
 
 .bg-light{
@@ -781,22 +913,18 @@ margin-right: 30%;
 }
 
 
+
 @media  screen and (max-width:1160px){
-
-  .box .icon
-  {
-
+  .box .icon{
   margin-top: -4rem;
-  margin-left: 20%;
-  margin-right: 45%;
-
+  margin-left: 30%;
+  margin-right: 30%;
   }
 
   .box .iconw{
     margin-top: -4rem;
-    margin-left: 23%;
-    margin-right: 45%;
-
+    margin-left: 32%;
+    margin-right: 32%;
   }
 
   #services .box{
@@ -810,51 +938,44 @@ margin-right: 30%;
     width: 180px;
   }
 
-
   .feature{
     padding: 1rem;
     overflow-x:scroll;
   }
 }
 
-
-
 @media screen and (max-width:768px){
-
   #services .boxes{
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 19%;
+    margin-right: 19%;
+    margin-bottom: -2%;
   }
 
   #services .box{
     margin-top: 2rem;
     margin-bottom: 4rem;
-    width: 300px;
-
+    width: 400px;
   }
+
   .box .icon
   {
-
   margin-top: -4rem;
-  margin-left: 30%;
-  margin-right: 45%;
-
+  margin-left: 35%;
+  margin-right: 40%;
   }
 
   .box .iconw{
     margin-top: -4rem;
-    margin-left: 35%;
-    margin-right: 45%;
-
+    margin-left: 40%;
+    margin-right: 40%;
   }
 
   .box .feature{
     margin-top: -1.5rem;
   }
-
 }
 
 @media screen and (max-width:600px){
@@ -865,76 +986,151 @@ margin-right: 30%;
     margin-left: 13%;
     margin-right: 25%;
   }
+
   #services h2{
     font-size: 1.4rem;
-
   }
 
   #services .box{
     margin-top: 2rem;
     margin-bottom: 4rem;
     width: 300px;
-
+  }
+  .box .icon
+  {
+  margin-top: -4rem;
+  margin-left: 32%;
+  margin-right: 32%;
   }
 
-
+  .box .iconw{
+    margin-top: -4rem;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
 }
 
+@media screen and (max-width:414px){
+  #services .boxes{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+.box .icon
+{
+margin-top: -4rem;
+margin-left: 32%;
+margin-right: 32%;
+}
+
+.box .iconw{
+  margin-top: -4rem;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+}
+
+@media screen and (max-width:411px){
+  #services .box{
+    margin-left: 8%;
+    margin-right: 8%;
+    font-size: 1rem;
+}
+
+#services .boxes{
+  margin-top: -1rem;
+  margin-bottom: -4rem;
+}
+
+#services h3{
+  font-size: 1.3rem;
+}
+
+.box .icon
+{
+margin-top: -4rem;
+margin-left: 30%;
+margin-right: 30%;
+}
+
+.box .iconw{
+  margin-top: -4rem;
+  margin-left: 34%;
+  margin-right: 34%;
+}
+}
 
 @media screen and (max-width:375px){
-
   #services .boxes{
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+
+  #services h2{
+    margin-bottom: 1rem;
+
   }
 
   #services .box{
     margin-top: 2rem;
     margin-bottom: 4rem;
     width: 200px;
-
   }
 
   .box .icon
   {
-
   margin-top: -4rem;
-  margin-left: 20%;
-  margin-right: 45%;
-
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  height: 50%;
   }
 
   .box .iconw{
     margin-top: -4rem;
-    margin-left: 25%;
-    margin-right: 45%;
-
+    margin-left: 32%;
+    margin-right: 32%;
+    width: 40%;
+    height: 40%;
   }
-
-
-
-
 }
+
+@media screen and (max-width:360px){
+  #services .boxes{
+  margin-top: -5%;
+  margin-left: 18%;
+}
+}
+
+@media screen and (max-width:320px){
+  #services .boxes{
+    margin-left: 12%;
+    margin-right: 15%;
+}
+}
+
+
+
+
+
+
 /*----Projects */
 
 
-}
-.project{
 
+.project{
   padding: 2rem;
   margin-top: 3rem;
-  margin-bottom: -6rem;
-
+  margin-bottom: 1rem;
 }
 
 .project h1{
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 2.5rem;
-  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-top: -1rem;
 }
 
 .leftbox h4{
@@ -950,14 +1146,12 @@ margin-right: 30%;
 .description{
 margin-left: 2rem;
 text-align: justify;
-
 }
-
-
 
 .knowledge{
 margin-bottom: 1rem;
 }
+
 .fa-java, .fa-server, .fa-database{
   font-size: 2rem;
   margin: 0 5px;
@@ -965,7 +1159,6 @@ margin-bottom: 1rem;
 }
 
 @media screen and (max-width:768px){
-
   .projectbox{
     display: flex;
     flex-direction: column;
@@ -975,15 +1168,16 @@ margin-bottom: 1rem;
 .projectbox .galary {
     margin-left: 8rem;
 }
+
 .galary img{
   max-width: 100%;
   height:auto;
 }
 
-
 .description{
   padding: 1.5rem;
 }
+
 .project h1{
   font-size: 2rem;
   text-align: center;
@@ -991,31 +1185,18 @@ margin-bottom: 1rem;
   margin-top: 2rem;
 }}
 
-@media  screen and (max-width:375px){
-
-.galary img{
-  max-width: 100%;
-  height: auto;
-  margin-left: -4.5rem;
-
-}
-}
-
-
 @media  screen and (max-width:628px){
-
 .galary img{
   max-width: 100%;
   height: auto;
   margin-left: -4.5rem;
-
 }
-
 
 .description{
   padding: 1.5rem;
   font-size: .9rem;
 }
+
 .project h1{
   font-size: 1.4rem;
   text-align: center;
@@ -1024,8 +1205,71 @@ margin-bottom: 1rem;
 }
 }
 
+@media  screen and (max-width:414px){
+.project h1{
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+.galary img{
+  max-width: 130%;
+  height: auto;
+  margin-left: -5rem;
+}
+}
 
+@media  screen and (max-width:411px){
+.project h1{
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+.galary img{
+  max-width: 120%;
+  height: auto;
+  margin-left: -4rem;
+}
+}
 
+@media  screen and (max-width:375px){
+.galary img{
+  max-width: 160%;
+  height: auto;
+  margin-left: -7rem;
+}
+
+.description .textparagraph{
+  width: 240px;
+  margin-left: -2rem;
+}
+}
+
+@media  screen and (max-width:360px){
+  .project h1{
+  margin-top: -5%;
+  }
+
+  .description .textparagraph{
+  width: 250px;
+  margin-left: -2rem;
+  }
+
+  .galary img{
+    max-width: 160%;
+    height: auto;
+    margin-left: -70%;
+  }
+}
+
+@media  screen and (max-width:320px){
+.textparagraph{
+  width:256px;
+  padding-right: 3rem;
+}
+.galary img{
+  max-width: 200%;
+  height: auto;
+  margin-left: -115%;
+}
+}
 
 
 
@@ -1044,13 +1288,12 @@ margin-bottom: 1rem;
 .contact .text-center{
 text-align: center; /* 这个是给h1 和p一个div 然后style div 让它在page中间*/
 color: white;
-
-
 }
 
 .text-center h1{
   font-size: 2rem;
 }
+
 .contact .row{
   padding: 40px;
   font-size: 22px;
@@ -1062,7 +1305,6 @@ color: white;
   padding: 15px 30px;
   text-align: center; /* 这个是吧icon center在中间*/
   color:#fff;
-
 }
 
 .contact .col-md-4 .fa{
@@ -1078,24 +1320,20 @@ font-size: 40px;
   background: transparent;
   font-size: 1rem;
 }
+
 .contact .buttoncontainer{
   text-align: center;
   padding: 2rem;
 }
 
-
-
-
 .contact .btn:hover{
   background:#e2a97b;
   color:black;
   transition: 0.6s;
-
 }
 
 .contact .btn  .fa{
   margin-right: 15px;
-
 }
 
 
@@ -1108,7 +1346,6 @@ font-size: 40px;
 
 .map .googlemap{
   filter: grayscale(100%);
-
 }
 
 .footer{
@@ -1119,15 +1356,12 @@ font-size: 40px;
   padding-top: 10px;
 }
 
-
 @media  screen and (max-width:700px){
   .contact .row{
     display: flex;
     flex-direction: column;
     font-size: 1rem;
   }
-
-
 
   .contact .btn{
     margin-left: 43%;
@@ -1138,18 +1372,37 @@ font-size: 40px;
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
     margin-bottom: .8rem;
-
   }
 
   .text-center h1{
     font-size: 1.4rem;
   }
 }
+
+@media  screen and (max-width:414px){
+  .contact .btn{
+    margin-left: 43%;
+    margin-right: 40%;
+    font-size: .6rem;
+    padding: 5px 10px 5px 10px;
+    margin-top: -1%;
+  }}
+
+@media  screen and (max-width:411px){
+  .contact .btn{
+    margin-left: 43%;
+    margin-right: 40%;
+    font-size: .6rem;
+    padding: 5px 10px 5px 10px;
+    margin-top: -1%;
+  }}
+
 @media  screen and (max-width:375px){
   .contact .row{
     display: block;
     font-size: 1rem;
   }
+
   .contact .btn{
     margin-left: 40%;
     margin-right: 40%;
@@ -1158,6 +1411,22 @@ font-size: 40px;
     flex-direction: column;
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
+  }
 
+  .contact .buttoncontainer{
+      margin-top: -5%;
+  }
+}
+
+@media  screen and (max-width:360px){
+  .contact .btn{
+    width: 59px;
+  }
+}
+
+@media  screen and (max-width:320px){
+  .contact .btn{
+margin-left: 40%;
+margin-right: 40%;
   }
 }
